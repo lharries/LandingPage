@@ -89,6 +89,7 @@
               </a>
             </li>
           </ul>
+
           <a class="btn btn-empty ml-md-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">Register Your Interest</a>
         </div>
       </nav>
@@ -98,11 +99,12 @@
   <section class="fdb-block" style="background-image: url(imgs/alt_wide_1.svg);">
     <div class="container" style="margin-top: 50px;">
       <div class="row justify-content-start">
-        <div class="col-12 col-sm-10 col-md-8 text-center text-sm-left" style="margin-bottom: 200px;">
+        <div class="col-12 col-sm-10 col-md-8 text-center text-sm-left" style="margin-bottom: 200px; color: black;">
           <h1>We're improving the internet for the visually impaired</h1>
           <p class="text-h3">Using machine learning to make every image of the internet accessible to the visually impaired.</p>
           <p class="mt-4">
-            <a class="btn btn-black btn-empty mr-3 mr-sm-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">Register Your Interest</a>
+            <a class="btn btn-black btn-empty mr-3 mr-sm-0 mt-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">Register Your Interest</a>
+            <a class="btn btn-black btn-empty mr-3 mr-sm-0 ml-md-3 mt-3" id="invertbtn" onclick="invertColors();">Invert Colors</a>
           </p>
         </div>
       </div>
@@ -177,7 +179,8 @@
             </ul>
           </p>
           <p class="text-h3">Regardless of device.</p>
-          <p class="text-h3">If you are interested in trying our product then please <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">register your interest here</a>.</p>
+          <p class="text-h3">If you are interested in trying our product then please
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">register your interest here</a>.</p>
         </div>
         <div class="col-12 col-md-6 ml-md-auto mt-4 mt-md-0">
           <img alt="a visually impaired child using a computer" class="img-fluid" src="./imgs/iab.jpg">
@@ -218,7 +221,8 @@
             <strong>Winner of Microsoft Prize!</strong>
           </h3>
           <h4></h4>
-          <p>VisualCognition are honoured to win the Microsoft Prize at the University of Cambridge's Hackathon. We look forward to continuing building on the Microsoft Cogntive Services Platform to deliver VisualCognition.</p>
+          <p>VisualCognition are honoured to win the Microsoft Prize at the University of Cambridge's Hackathon. We look forward
+            to continuing building on the Microsoft Cogntive Services Platform to deliver VisualCognition.</p>
         </div>
       </div>
 
@@ -351,8 +355,9 @@
       </div>
     </div>
   </footer>
+
   <!-- Development -->
-<!-- 
+  <!-- 
   <section class="fdb-block p-2" id="navigator">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-md">
@@ -413,6 +418,41 @@
       el.addEventListener('click', chooseBlock);
     }
   </script> -->
+
+  <script>
+    document.getElementById("invertbtn").onclick = invertColors;
+    function invertColors() {
+      // the css we are going to inject
+      var css = 'html {-webkit-filter: invert(100%);' +
+        '-moz-filter: invert(100%);' +
+        '-o-filter: invert(100%);' +
+        '-ms-filter: invert(100%); }',
+
+        head = document.getElementsByTagName('head')[0],
+        style = document.createElement('style');
+
+      // a hack, so you can "invert back" clicking the bookmarklet again
+      if (!window.counter) {
+        window.counter = 1;
+      } else {
+        window.counter++;
+        if (window.counter % 2 == 0) {
+          var css =
+            'html {-webkit-filter: invert(0%); -moz-filter:    invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%); }'
+        }
+      };
+
+      style.type = 'text/css';
+      if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+      } else {
+        style.appendChild(document.createTextNode(css));
+      }
+
+      //injecting the css to the head
+      head.appendChild(style);
+    }
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
