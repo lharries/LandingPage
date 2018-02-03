@@ -1,5 +1,10 @@
 .content {
-  min-height: 270px; }
+  min-height: 230px; }
+
+.fixed-navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%; }
 
 .btn {
   padding: 9px 26px;
