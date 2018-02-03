@@ -4,7 +4,8 @@
 .fixed-navbar {
   position: fixed;
   z-index: 10;
-  width: 100%; }
+  width: 100%;
+  background-color: white; }
 
 .btn {
   padding: 9px 26px;
