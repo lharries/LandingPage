@@ -27,7 +27,7 @@
   "scripts": {
     "gulp": "gulp",
     "dist": "gulp dist",
-    "deploy": "gulp dist && git add . && git commit -m 'built and deployed'"
+    "deploy": "npm run dist && git add . && git commit -m 'built and deployed'"
   },
   "devDependencies": {
     "del": "^3.0.0",

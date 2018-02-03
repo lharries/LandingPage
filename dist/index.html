@@ -42,7 +42,7 @@
 
 <body>
   <header>
-    <div class="container">
+    <div class="container fixed-navbar">
       <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="/">
           <!-- <img src="./imgs/img_logo.png" height="30" alt="image"> -->
@@ -55,22 +55,20 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav1">
-          <!-- <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home
-                <span class="sr-only">(current)</span>
-              </a>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#problem">Problem</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.froala.com">Features</a>
+              <a class="nav-link" href="#solution">Solution</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.froala.com">Pilot</a>
+              <a class="nav-link" href="#news">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.froala.com">Team</a>
+              <a class="nav-link" href="#team">Team</a>
             </li>
-          </ul> -->
+          </ul>
 
           <ul class="navbar-nav justify-content-end d-none d-lg-flex ml-md-auto">
             <li class="nav-item">
@@ -89,7 +87,7 @@
               </a>
             </li>
           </ul>
-          <a class="btn btn-empty ml-md-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">Register Interest</a>
+          <a class="btn btn-empty ml-md-3" href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">Register Your Interest</a>
         </div>
       </nav>
     </div>
@@ -100,9 +98,9 @@
       <div class="row justify-content-start">
         <div class="col-12 col-sm-10 col-md-8 text-center text-sm-left" style="margin-bottom: 200px;">
           <h1>We're improving the internet for the visually impaired</h1>
-          <p class="text-h3">Using machine learning to generate descriptions for every image on the internet.</p>
+          <p class="text-h3">Using machine learning to make every image of the internet accessible to the visually impaired.</p>
           <p class="mt-4">
-            <a class="btn btn-black btn-empty mr-3 mr-sm-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">Register Interest</a>
+            <a class="btn btn-black btn-empty mr-3 mr-sm-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">Register Your Interest</a>
           </p>
         </div>
       </div>
@@ -123,7 +121,7 @@
     </div>
   </section>
 
-  <section class="fdb-block">
+  <section class="fdb-block" id="problem">
     <div class="container">
       <div class="row">
         <div class="col text-center">
@@ -140,6 +138,14 @@
         </div>
       </div>
       <div class="row pt-4">
+        <div class="col">
+          <p style="text-align: center;">Imagine not being able to tell who's in photo or what the text says.</p>
+        </div>
+        <div class="col">
+          <p style="text-align: center;">All user uploaded content is inaccessible.</p>
+        </div>
+      </div>
+      <div class="row pt-4">
         <div class="col" style="margin: auto;">
           <img alt="Saqib Shaikh a software engineer at Microsoft, wearing the SeeingAI glasses with the text saying 'For me, it's about taking that far-off dream"
             class="img-fluid" src="./imgs/saqib.jpg">
@@ -149,18 +155,10 @@
             src="./imgs/twitter.png">
         </div>
       </div>
-      <div class="row pt-4">
-        <div class="col">
-          <p style="text-align: center;">Imagine not being able to tell who's in photo or what the text says.</p>
-        </div>
-        <div class="col">
-          <p style="text-align: center;">All user uploaded content is inaccessible.</p>
-        </div>
-      </div>
   </section>
 
 
-  <section class="fdb-block">
+  <section class="fdb-block" id="solution">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-6 col-lg-5">
@@ -186,7 +184,7 @@
     </div>
   </section>
 
-  <section class="fdb-block">
+  <section class="fdb-block" id="news">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 text-center">
@@ -225,7 +223,7 @@
     </div>
   </section>
 
-  <section class="fdb-block team-1">
+  <section class="fdb-block team-1" id="team">
     <div class="container">
       <div class="row text-center justify-content-center">
         <div class="col-8">
@@ -289,7 +287,7 @@
         </div>
         <div class="col-sm-3 text-left">
           <div class="fdb-box">
-            <img alt="Headshot of Marcin" class="img-fluid" src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/12141540_1256949047654937_5873112669385078612_n.jpg?oh=e7fe42bfe88b91e270c3b6dcd214b6b4&oe=5B1BD4AC">
+            <img alt="Headshot of Marcin wearing a black turtleneck" class="img-fluid" src="./imgs/marcin.jpg">
 
             <div class="content">
               <h3>
@@ -315,7 +313,7 @@
             <strong>We want to make the internet work for everyone.</strong>
           </h2>
           <p class="mt-5 mt-sm-4">
-            <a class="btn btn btn-empty mr-3 mr-sm-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">Register Interest</a>
+            <a class="btn btn btn-empty mr-3 mr-sm-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">Register Your Interest</a>
           </p>
         </div>
       </div>
@@ -352,7 +350,7 @@
     </div>
   </footer>
   <!-- Development -->
-<!-- 
+
   <section class="fdb-block p-2" id="navigator">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-md">
@@ -412,7 +410,7 @@
 
       el.addEventListener('click', chooseBlock);
     }
-  </script> -->
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
