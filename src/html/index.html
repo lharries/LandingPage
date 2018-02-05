@@ -128,37 +128,39 @@
   <section class="fdb-block" id="problem">
     <div class="container">
       <div class="row">
-        <div class="col text-center">
+        <div class="col">
           <h1>The Internet Is Broken</h1>
-          <p class="text-h3">There are 32 million people with visual impairments. Many rely on a Screen Reader to browse the internet.
+          <p class="text-h3">
+            There are 32 million people with visual impairments.
             <br>
-            <br>Screen Readers need
-            <strong>alt-tags</strong> to provide a caption for images. However, for the majority of photos on the internet they are
-            missing.
+            <br> People with visual impairments frequently rely on a Screen Reader to navigate the internet. The Screen Reader
+            reads out what’s on each page. When the Screen Reader reaches an image it has to rely on the “alt tag” to provide
+            a caption for the image.
+
+            <br>For the majority of the internet these “alt tags” are either
+            <strong>missing</strong> (think of any user-uploaded content such as Twitter or LinkedIn),
+            <strong>superficial</strong> or
+            <strong></strong>inaccurate</strong>.
+            <br>
+            <br>Imagine seeing a job post where the information to apply is in a screenshot but all you hear is “Image”.
+            <br>
+            <br> This happens to millions of people everyday.
           </p>
         </div>
       </div>
     </div>
-  </section>  
+  </section>
 
   <section class="fdb-block" id="problem" style="z-index: 1; background: transparent;">
     <div class="container">
-      <div class="row pt-4">
-        <div class="col">
-          <p style="text-align: center;">Imagine not being able to tell who's in photo or what the text says.</p>
-        </div>
-        <div class="col">
-          <p style="text-align: center;">All user uploaded content is inaccessible.</p>
-        </div>
-      </div>
-      <div class="row pt-4">
-        <div class="col" style="margin: auto;">
-          <img alt="Saqib Shaikh a software engineer at Microsoft, wearing the SeeingAI glasses with the text saying 'For me, it's about taking that far-off dream"
-            class="img-fluid" src="./imgs/saqib.jpg">
-        </div>
-        <div class="col">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-5 box-shadow" style="margin: auto;">
           <img alt="an unaccessible image on twitter. The photo shows Satya Nadella retweeting a photo by Microsoft Research." class="img-fluid"
             src="./imgs/twitter.png">
+        </div>
+        <div class="col-12 col-md-5 col-lg-6  mt-4  mb-auto mt-md-auto mb-md-auto">
+          <h2>We rely on images for context.</h2>
+          <h3>But it's missing for the 32 million people with visual impairments.</h3>
         </div>
       </div>
   </section>
@@ -170,9 +172,13 @@
         <div class="col-12 col-md-6 col-lg-5">
           <h1>The Solution</h1>
           <p class="text-h3">
-            <strong>Machine learning</strong> enables us to generate captions for every image on the internet.
+            We have created a plugin which works with your existing screen reader to generate the image descriptions for every image
+            on the internet.
             <br>
-            <br> We generate:
+            <br> It works by using by
+            <strong>machine learning</strong> to generate the descriptions as you browse..
+            <br>
+            <br> The descriptions include:
             <ul class="text-h3">
               <li>What is in the photo</li>
               <li>What the text says</li>
@@ -180,12 +186,55 @@
               <li>What their facial expressions are</li>
             </ul>
           </p>
-          <p class="text-h3">Regardless of device.</p>
+          <!-- <p class="text-h3">Regardless of device.</p> -->
           <p class="text-h3">If you are interested in trying our product then please
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUAVZ1Uat50gjA-6bwPmHuJd9sslupxpWp2FJfBsSYZ7AC0Q/viewform?usp=sf_link">register your interest here</a>.</p>
         </div>
         <div class="col-12 col-md-6 ml-md-auto mt-4 mt-md-0">
           <img alt="a visually impaired child using a computer" class="img-fluid box-shadow" src="./imgs/iab.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fdb-block" style="overflow: visible;">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h1>Try it for yourself</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10 col-md-6 mb-4" style="margin: auto;">
+          <div class="col-12 col-md-10">
+            <img alt="a visually impaired child using a computer" class="img-fluid box-shadow" src="./imgs/catmeme.png">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mt-auto mb-auto">
+          <div class="row">
+            <div class="col-4">
+              <button class="btn btn-empty button-shadow" id="playWithout">Play</button>
+            </div>
+            <div class="col-8">
+              <strong>Without Visual Cognition:</strong>
+              <p>
+                Description: "Image"
+              </p>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-4">
+              <button class="btn btn-empty button-shadow" id="playWith">Play</button>
+            </div>
+            <div class="col-8">
+              <strong>With Visual Cognition:</strong>
+              <p>
+                Description: "A cat wearing a suit and tie. The text says What am I doing here"
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -422,38 +471,55 @@
   </script> -->
 
   <script>
-    document.getElementById("invertbtn").onclick = invertColors;
-    function invertColors() {
-      // the css we are going to inject
-      var css = 'html {-webkit-filter: invert(100%);' +
-        '-moz-filter: invert(100%);' +
-        '-o-filter: invert(100%);' +
-        '-ms-filter: invert(100%); }',
+    // document.getElementById("invertbtn").onclick = invertColors;
 
-        head = document.getElementsByTagName('head')[0],
-        style = document.createElement('style');
+    // function invertColors() {
+    //   // the css we are going to inject
+    //   var css = 'html {-webkit-filter: invert(100%);' +
+    //     '-moz-filter: invert(100%);' +
+    //     '-o-filter: invert(100%);' +
+    //     '-ms-filter: invert(100%); }',
 
-      // a hack, so you can "invert back" clicking the bookmarklet again
-      if (!window.counter) {
-        window.counter = 1;
-      } else {
-        window.counter++;
-        if (window.counter % 2 == 0) {
-          var css =
-            'html {-webkit-filter: invert(0%); -moz-filter:    invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%); }'
-        }
-      };
+    //     head = document.getElementsByTagName('head')[0],
+    //     style = document.createElement('style');
 
-      style.type = 'text/css';
-      if (style.styleSheet) {
-        style.styleSheet.cssText = css;
-      } else {
-        style.appendChild(document.createTextNode(css));
-      }
+    //   // a hack, so you can "invert back" clicking the bookmarklet again
+    //   if (!window.counter) {
+    //     window.counter = 1;
+    //   } else {
+    //     window.counter++;
+    //     if (window.counter % 2 == 0) {
+    //       var css =
+    //         'html {-webkit-filter: invert(0%); -moz-filter:    invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%); }'
+    //     }
+    //   };
 
-      //injecting the css to the head
-      head.appendChild(style);
+    //   style.type = 'text/css';
+    //   if (style.styleSheet) {
+    //     style.styleSheet.cssText = css;
+    //   } else {
+    //     style.appendChild(document.createTextNode(css));
+    //   }
+
+    //   //injecting the css to the head
+    //   head.appendChild(style);
+    // }
+
+    function withoutVisualCognition() {
+      var msg = new SpeechSynthesisUtterance('Image');
+      speechSynthesis.speak(msg);
     }
+
+    function withVisualCognition() {
+      var msg = new SpeechSynthesisUtterance('A cat wearing a suit and tie. The text says What am i doing here?');
+      speechSynthesis.speak(msg);
+    }
+
+    document.getElementById("playWithout").onclick = withoutVisualCognition;
+
+    document.getElementById("playWith").onclick = withVisualCognition;
+
+    console.log('fire');
   </script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
