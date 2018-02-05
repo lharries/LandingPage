@@ -27,6 +27,11 @@ var build = function (dest) {
     gulp.src(['src/imgs/**/*'])
         .pipe(gulp.dest(dest + '/imgs'))
   })
+
+  gulp.task('cname-' + dest, function () {
+    gulp.src(['src/CNAME'])
+        .pipe(gulp.dest(dest))
+  })
 }
 
 build('.tmp');
@@ -72,6 +77,6 @@ gulp.task('screenshots', function(cb) {
   });
 });
 
-gulp.task('dist', ['clean-dist', 'html-dist', 'imgs-dist', 'sass-dist']);
+gulp.task('dist', ['clean-dist', 'html-dist', 'imgs-dist', 'sass-dist', 'cname-dist']);
 
 gulp.task('default', ['clean-.tmp', 'html-.tmp', 'imgs-.tmp', 'sass-.tmp', 'connect', 'watch']);
