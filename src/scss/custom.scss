@@ -8,3 +8,16 @@
     width: 100%;
     background-color: white;
 }
+
+.box-shadow {
+    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07) !important;
+}
+
+.button-shadow {
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08) !important;
+}
+
+.button-shadow:hover {
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08) !important;
+    transform: translateY(-1px);
+}
