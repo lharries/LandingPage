@@ -13,8 +13,9 @@
 
   <link rel="shortcut icon" href="./imgs/icon.png" />
 
-  <meta property="og:image" content="http://visualcognition.co/imgs/iab.jpg"/>
-  <meta property="og:description" content="The majority of images online are inaccessible to the visually impaired. At Visual Cognition we have built a plugin which works with your existing screen reader to generate the captions as you browse the internet."/>
+  <meta property="og:image" content="http://visualcognition.co/imgs/iab.jpg" />
+  <meta property="og:description" content="The majority of images online are inaccessible to the visually impaired. At Visual Cognition we have built a plugin which works with your existing screen reader to generate the captions as you browse the internet."
+  />
 
   <link type="text/css" rel="stylesheet" href="./css/froala_blocks.css">
 
@@ -134,7 +135,10 @@
         <div class="col">
           <h1>The Internet Is Broken</h1>
           <p class="text-h3">
-            There are 250+ million people with visual impairments<sup><a href="http://www.who.int/mediacentre/factsheets/fs282/en/">1</a></sup>.
+            There are 250+ million people with visual impairments
+            <sup>
+              <a href="http://www.who.int/mediacentre/factsheets/fs282/en/">1</a>
+            </sup>.
             <br>
             <br> People with visual impairments frequently rely on a Screen Reader to navigate the internet. The Screen Reader
             reads out what’s on each page. When the Screen Reader reaches an image it has to rely on the “alt tag” to provide
@@ -163,7 +167,10 @@
         </div>
         <div class="col-12 col-md-5 col-lg-6  mt-4  mb-auto mt-md-auto mb-md-auto">
           <h2>We rely on images for context.</h2>
-          <h3>But it's missing for the 250+ million people with visual impairments<sup><a href="http://www.who.int/mediacentre/factsheets/fs282/en/">1</a></sup>.</h3>
+          <h3>But it's missing for the 250+ million people with visual impairments
+            <sup>
+              <a href="http://www.who.int/mediacentre/factsheets/fs282/en/">1</a>
+            </sup>.</h3>
         </div>
       </div>
   </section>
@@ -210,7 +217,8 @@
       <div class="row">
         <div class="col-10 col-md-6 mb-4" style="margin: auto;">
           <div class="col-12 col-md-10">
-            <img alt="an example photo of a previously inaccessible image. the photos shows A cat wearing a suit and tie. The text says What am I doing here" class="img-fluid box-shadow" src="./imgs/catmeme.png">
+            <img alt="an example photo of a previously inaccessible image. the photos shows A cat wearing a suit and tie. The text says What am I doing here"
+              class="img-fluid box-shadow" src="./imgs/catmeme.png">
           </div>
         </div>
         <div class="col-12 col-md-6 mt-auto mb-auto">
@@ -523,6 +531,19 @@
     document.getElementById("playWith").onclick = withVisualCognition;
 
     console.log('fire');
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113881818-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-113881818-1');
   </script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
