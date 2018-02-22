@@ -1,5 +1,7 @@
 ## Landing Page
 
+Visit [VisualCognition.co](https://visualcognition.co) for more info.
+
 ### Contributing
 
 1. Fork the repo
